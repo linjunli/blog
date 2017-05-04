@@ -21,5 +21,12 @@ var config = {
         },
         // ignoreTLS: true,
     },
+    session_secret: 'lilinjun',
+    auth_cookie_name: 'lilinjun/blog',
+
+    redis_host: '127.0.0.1',
+    redis_port: '6379',
+    redis_db: 0,
+    redis_password: '',
 }
 module.exports = config;
