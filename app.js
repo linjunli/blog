@@ -11,6 +11,7 @@ var RedisStore = require('connect-redis')(session);
 var bodyParser = require('body-parser');
 require('./models');
 var auth = require('./middlewares/auth.js')
+var renderMiddleware = require('./middlewares/render');
 
 var home = require('./routes/home');
 var users = require('./routes/users');
@@ -25,6 +26,11 @@ nunjucks.configure(path.join(__dirname, 'views'), {
     autoescape: true,
     express: app
 });
+
+if (config.debug) {
+    //render time
+    app.use(renderMiddleware.render);
+}
 // app.set('view engine', 'html');
 // app.engine('html', require('nunjucks'));
 

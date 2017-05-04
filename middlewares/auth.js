@@ -6,6 +6,9 @@ var UserProxy = require('../proxy/user.js');
 var config = require('../configs/config.js');
 var eventproxy = require('eventproxy');
 
+/**
+ * 生成session
+ */
 exports.genera_session = (user, res) => {
     var auth_token = user._id + '$$$$';
     var options = {
@@ -16,6 +19,16 @@ exports.genera_session = (user, res) => {
     };
     res.cookie(config.auth_cookie_name, auth_token, options);
 };
+
+/**
+ * 需要登录验证
+ */
+exports.userRequired = (req, res, next) => {
+    if (!req.session || !req.session.user || !req.session.user._id) {
+        return res.status(403).send('forbidden!');
+    }
+    next();
+}
 
 /**
  * 验证用户是否登录

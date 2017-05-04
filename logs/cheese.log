@@ -2,3 +2,11 @@
 [2017-05-03 22:43:46.775] [INFO] cheese - Render view index undefined
 [2017-05-03 22:45:37.704] [INFO] cheese - Render view index [32m(346ms)[39m
 [2017-05-04 13:04:25.884] [ERROR] cheese - connec to mongodb://127.0.0.1/blog error:  failed to connect to server [127.0.0.1:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+[2017-05-04 22:14:53.272] [ERROR] cheese - connec to mongodb://127.0.0.1/blog error:  failed to connect to server [127.0.0.1:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+[2017-05-04 22:33:36.265] [INFO] cheese - Render view home [32m(14ms)[39m
+[2017-05-04 22:34:02.749] [INFO] cheese - Render view home [32m(0ms)[39m
+[2017-05-04 22:34:09.800] [INFO] cheese - Render view signup [32m(3ms)[39m
+[2017-05-04 22:34:13.988] [INFO] cheese - Render view signin [32m(2ms)[39m
+[2017-05-04 22:34:31.511] [INFO] cheese - Render view home [32m(0ms)[39m
+[2017-05-04 22:35:36.691] [INFO] cheese - Render view home [32m(0ms)[39m
+[2017-05-04 22:35:49.313] [INFO] cheese - Render view signup [32m(0ms)[39m
