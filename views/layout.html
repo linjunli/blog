@@ -18,8 +18,12 @@
         </div>
     <div>
         <ul class="nav navbar-nav pull-right">
-            <li class="active"><a href="/signup">注册</a></li>
+        {% if 1 %}
+        <li class="active"><a href="/signup">{{ current_user }}注册</a></li>
             <li><a href="/signin">登录</a></li>
+            {% else %}
+            <li><a href="/signout">退出</a></li>
+            {% endif %}
         </ul>
     </div>
     </div>

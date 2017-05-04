@@ -10,6 +10,8 @@ var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 var bodyParser = require('body-parser');
 require('./models');
+var auth = require('./middlewares/auth.js')
+
 var home = require('./routes/home');
 var users = require('./routes/users');
 var sign = require('./routes/sign')
@@ -43,11 +45,15 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', [home, sign]);
 // app.use('/', sign);
 app.use('/users', users);
+
+//middleware my
+app.use(auth.authUser);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

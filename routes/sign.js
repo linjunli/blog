@@ -99,5 +99,5 @@ router.get('/signout', (req, res, next) => {
     req.session.destroy();
     res.clearCookie(config.auth_cookie_name, { path: '/' });
     res.redirect('/');
-})
+});
 module.exports = router;

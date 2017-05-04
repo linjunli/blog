@@ -16,13 +16,22 @@ exports.getUserByEmail = (email, callback) => {
     User.findOne({ email: email }, callback);
 };
 /**
- * 新建一个用户
- * Callback:
- * -error, 数据库异常
- * - user, 用户
- * @param 
- * @param {Function} callback
+ * 按id查找用户
  */
+exports.getUserById = (id, callback) => {
+        if (!id) {
+            return callback;
+        }
+        User.findOne({ _id: id }, callback);
+    }
+    /**
+     * 新建一个用户
+     * Callback:
+     * -error, 数据库异常
+     * - user, 用户
+     * @param 
+     * @param {Function} callback
+     */
 exports.newUser = (nickname, email, password, callback) => {
     var user = new User();
     user.nickname = nickname;
