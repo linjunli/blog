@@ -1,3 +1,4 @@
 [2017-05-03 22:42:25.270] [INFO] cheese - Render view index (345)
 [2017-05-03 22:43:46.775] [INFO] cheese - Render view index undefined
 [2017-05-03 22:45:37.704] [INFO] cheese - Render view index [32m(346ms)[39m
+[2017-05-04 13:04:25.884] [ERROR] cheese - connec to mongodb://127.0.0.1/blog error:  failed to connect to server [127.0.0.1:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]

@@ -6,5 +6,11 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     res.render('index', { data: 'Express' });
 });
+router.get('/index', function(req, res, next) {
+    res.render('index', { data: 'Express' });
+});
+router.get('/home', function(req, res, next) {
+    res.render('index', { data: 'Express' });
+});
 
 module.exports = router;
