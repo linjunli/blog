@@ -1,6 +1,7 @@
 var express = require('express');
 const rendertime = require('../middlewares/render.js');
 var router = express.Router();
+var limit = require('../common/cache');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
